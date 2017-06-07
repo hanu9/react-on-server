@@ -4,7 +4,9 @@
   "description": "react server side rendering with react router 4",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js --exec babel-node",
+    "build": "webpack --env.dev --watch"
   },
   "keywords": [
     "server-side-rendering",
