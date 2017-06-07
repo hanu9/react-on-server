@@ -1,0 +1,19 @@
+{
+  "name": "react-on-server",
+  "version": "1.0.0",
+  "description": "react server side rendering with react router 4",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "side",
+    "rendering",
+    "react",
+    "router",
+    "4"
+  ],
+  "author": "Hanuman Sahay Jat",
+  "license": "ISC"
+}
