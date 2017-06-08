@@ -12,13 +12,20 @@ app.use(Express.static('public'));
 // This is fired every time the server side receives a request
 app.get("*",(req, res)=>{
     // This context object contains the results of the render
+  console.log(req.url);
   const context = {};
   const html = renderToString(
     <StaticRouter location={req.url} context={context}>
         <App />
     </StaticRouter>
   );
-  res.status(200).send(renderFullPage(html));
+    if (context.url) {
+      // can use the `context.status` that
+      // we added in RedirectWithStatus
+      res.redirect(context.status, context.url);
+  }else{
+      res.status(200).send(renderFullPage(html));
+  }
 });
 
 
